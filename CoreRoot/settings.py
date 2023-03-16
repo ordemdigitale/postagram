@@ -72,11 +72,22 @@ WSGI_APPLICATION = 'CoreRoot.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
-DATABASES = {
+# sqlite
+""" DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+    }
+} """
+# postgres
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'coredb',
+        'USER': 'postgres',
+        'PASSWORD': 'DBpost2023@',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
