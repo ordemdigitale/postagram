@@ -1,2 +1,2 @@
-# Welcome to the backend of Postagram application :metal.
+# Welcome to the backend of Postagram app.
 **It is written in Python Django.**
