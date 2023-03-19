@@ -8,12 +8,11 @@ router = routers.SimpleRouter()
 # ################### USER ###################### #
 # ##################################################################### #
 router.register(r'user', UserViewSet, basename='user')
-
-urlpatterns = [
-    *router.urls,
-]
-
 # ##################################################################### #
 # ################### AUTH ###################### #
 # ##################################################################### #
 router.register(r'auth/register', RegisterViewSet, basename='auth-register')
+
+urlpatterns = [
+    *router.urls,
+]
