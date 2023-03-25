@@ -23,6 +23,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Cors headers settings
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000"
+]
+
 
 # Application definition
 
@@ -36,6 +42,7 @@ INSTALLED_APPS = [
     # External packages
     'rest_framework',
     'rest_framework_simplejwt',
+    'corsheaders',
     # Internal packages
     'core',
     'core.user',
@@ -52,6 +59,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'CoreRoot.urls'
